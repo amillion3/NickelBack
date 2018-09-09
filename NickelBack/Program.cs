@@ -9,13 +9,13 @@ namespace NickelBack
         {
             var goodSongs = new List<Song>();
             HashSet<Song> allSongs = new HashSet<Song>();
-            Song song1 = new Song("Blink 182", "All The Small Things");
-            Song song2 = new Song("Nickelback", "Home");
-            Song song3 = new Song("Smashing Pumpkins", "Tonight, Tonight");
-            Song song4 = new Song("Nickelback", "After the Rain");
-            Song song5 = new Song("Red Hot Chili Peppers", "Californication");
-            Song song6 = new Song("Nickelback", "Feed The Machine");
-            Song song7 = new Song("Alice in Chains", "Would");
+            allSongs.Add(new Song("Blink 182", "All The Small Things"));
+            allSongs.Add(new Song("Nickelback", "Home"));
+            allSongs.Add(new Song("Smashing Pumpkins", "Tonight, Tonight"));
+            allSongs.Add(new Song("Nickelback", "After the Rain"));
+            allSongs.Add(new Song("Red Hot Chili Peppers", "Californication"));
+            allSongs.Add(new Song("Nickelback", "Feed The Machine"));
+            allSongs.Add(new Song("Alice in Chains", "Would"));
 
             // Define a class called Song that has a string property Artist and a string property Name.
             // Both properties should be required(invariant) in order to construct an instance of Song
