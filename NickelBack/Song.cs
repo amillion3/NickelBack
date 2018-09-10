@@ -6,13 +6,17 @@ namespace NickelBack
 {
     class Song
     {
-        private readonly string _artist;
-        private readonly string _name;
+        protected readonly string _artist;
+        protected readonly string _name;
 
         public Song(string artist, string name)
         {
             _artist = artist;
             _name = name;
+        }
+
+        public string GetArtistName() {
+            return _artist;
         }
     }
 }
