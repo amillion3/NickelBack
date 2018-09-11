@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NickelBack
+﻿namespace NickelBack
 {
     class Song
     {
-        private readonly string _artist;
-        private readonly string _name;
+        protected readonly string _artist;
+        protected readonly string _name;
+
+        public string GetArtistName {
+            get { return _artist; }
+        }
+
+        public string GetSongName
+        {
+            get { return _name; }
+        }
 
         public Song(string artist, string name)
         {
             _artist = artist;
             _name = name;
         }
+
     }
 }

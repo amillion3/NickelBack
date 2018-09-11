@@ -17,16 +17,22 @@ namespace NickelBack
             allSongs.Add(new Song("Nickelback", "Feed The Machine"));
             allSongs.Add(new Song("Alice in Chains", "Would"));
 
-            // Define a class called Song that has a string property Artist and a string property Name.
-            // Both properties should be required(invariant) in order to construct an instance of Song
-            //Define a List, named goodSongs, that will hold instances of Song.
-            //Define a HashSet, named allSongs, that contains 7 instances of Song.
-            //Make sure that some of the songs are from the band Nickelback. You can see a list of 
-            // their greatest hits on Amazon.
-            //Once the set is populated with 7 instances, iterate over the set of songs, 
-            // and check if the band name is "Nickelback".
-            //If the band is not Nickelback, then add it to the goodSongs list.
-            //Use another foreach loop to print out all the good songs.
+            // Iterate over allSongs and save non-Nickelback to a new HashSet
+            foreach (Song i in allSongs)
+            {
+                if (i.GetArtistName != "Nickelback")
+                {
+                    goodSongs.Add(new Song(i.GetArtistName, i.GetSongName));
+                }
+            }
+
+            // Print out non-Nickelback songs
+            foreach (Song j in goodSongs)
+            {
+                Console.WriteLine($"{j.GetArtistName} - {j.GetSongName}");
+            }
+
+            Console.ReadLine();
         }
     }
 }
